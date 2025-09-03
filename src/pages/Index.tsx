@@ -9,7 +9,7 @@ import {
   Gamepad2, 
   Hammer, 
   Wheat, 
-  Hotel, 
+  Hotel,
   Star, 
   Globe, 
   TrendingUp,
@@ -91,7 +91,11 @@ const Index = () => {
             <div>
               <div className="animate-float mb-6">
                 <div className="p-4 rounded-2xl bg-gradient-primary shadow-xl border border-primary/20">
-                  <Globe className="h-16 w-16 text-white" />
+                  <img 
+                    src="/serenity-logo.png" 
+                    alt="Serenity Business Project Logo" 
+                    className="h-16 w-16 object-contain"
+                  />
                 </div>
               </div>
               <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -165,20 +169,20 @@ const Index = () => {
                     </div>
                     <CardTitle className="text-lg text-center text-gray-900">
                       {venture.title}
-                    </CardTitle>
-                  </CardHeader>
+                      </CardTitle>
+                    </CardHeader>
                   <CardContent className="pt-0">
                     <p className="text-sm text-gray-600 text-center mb-4 text-body">
                       {venture.description}
                     </p>
                     <Button asChild className="w-full h-10 rounded-lg text-sm">
                       <a href={venture.link}>
-                        Learn More
+                        Learn More 
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
               );
             })}
           </div>
@@ -192,7 +196,7 @@ const Index = () => {
             <div>
               <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
                 About Us
-              </h2>
+            </h2>
               <div className="space-y-6">
                 <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
@@ -203,9 +207,9 @@ const Index = () => {
                     <strong>RUHARA MIHIGO Shammy</strong> leads our organization with a vision for community development 
                     and sustainable business growth. His expertise spans multiple sectors including technology, 
                     education, and community services.
-                  </p>
-                </div>
-                
+            </p>
+          </div>
+
                 <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                     <Target className="h-6 w-6 mr-3 text-secondary" />
@@ -231,24 +235,24 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            
+                  </div>
+                  
             <div className="space-y-6">
               <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <TrendingUp className="h-6 w-6 mr-3 text-accent" />
                   Key Achievements
                 </h3>
-                <div className="space-y-3">
+                  <div className="space-y-3">
                   {achievements.map((achievement, index) => (
-                    <div key={index} className="flex items-start">
+                      <div key={index} className="flex items-start">
                       <Star className="h-4 w-4 text-yellow-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-gray-700">{achievement}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
+                      </div>
+                    ))}
+                  </div>
+            </div>
+
               <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <Heart className="h-6 w-6 mr-3 text-red-500" />
@@ -284,23 +288,23 @@ const Index = () => {
                   <p><strong>Email:</strong> mihigoshammy66@gmail.com</p>
                 </div>
               </div>
-              
+
               <div className="p-4 bg-gray-50 rounded-xl">
                 <h3 className="font-semibold text-gray-900 mb-2">Social Media</h3>
                 <div className="space-y-2 text-sm text-gray-700">
                   <p><strong>Instagram:</strong> @shammymihigo</p>
                   <p><strong>Facebook:</strong> Mihigo Shammy</p>
-                </div>
-              </div>
+                    </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary hover:opacity-90 h-12 px-8 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
                 Contact Us
-              </Button>
+                </Button>
               <Button variant="outline" size="lg" className="h-12 px-8 rounded-xl text-lg font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300">
                 Learn More
-              </Button>
+                </Button>
             </div>
           </div>
         </div>

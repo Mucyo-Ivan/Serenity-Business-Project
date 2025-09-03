@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Building2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navigation = () => {
@@ -28,8 +28,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="p-3 rounded-2xl bg-gradient-primary shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <Building2 className="h-8 w-8 text-white" />
+            <div className="p-2 rounded-2xl bg-gradient-primary shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <img 
+                src="/serenity-logo.png" 
+                alt="Serenity Business Project Logo" 
+                className="h-8 w-8 object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-xl text-foreground group-hover:text-primary transition-colors duration-300">

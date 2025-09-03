@@ -60,11 +60,15 @@ const Engineering = () => {
       <section className="pt-2 pb-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="animate-float mb-6 mx-auto w-fit">
-              <div className="p-4 rounded-2xl bg-gradient-primary shadow-xl border border-primary/20">
-                <Hammer className="h-16 w-16 text-white" />
+                          <div className="animate-float mb-6 mx-auto w-fit">
+                <div className="p-4 rounded-2xl bg-gradient-primary shadow-xl border border-primary/20">
+                  <img 
+                    src="/serenity-logo.png" 
+                    alt="Serenity Business Project Logo" 
+                    className="h-16 w-16 object-contain"
+                  />
+                </div>
               </div>
-            </div>
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Engineering Services
             </h1>

@@ -28,11 +28,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="p-2 rounded-2xl bg-gradient-primary shadow-lg group-hover:shadow-xl transition-all duration-300">
+            <div className="p-3 rounded-2xl bg-gradient-primary shadow-lg group-hover:shadow-xl transition-all duration-300">
               <img 
                 src="/serenity-logo.png" 
                 alt="Serenity Business Project Logo" 
-                className="h-8 w-8 object-contain"
+                className="h-12 w-12 object-contain"
               />
             </div>
             <div className="flex flex-col">

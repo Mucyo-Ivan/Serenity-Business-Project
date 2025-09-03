@@ -75,11 +75,11 @@ const Hospitality = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
                           <div className="animate-float mb-6 mx-auto w-fit">
-                <div className="p-4 rounded-2xl bg-gradient-primary shadow-xl border border-primary/20">
+                <div className="p-5 rounded-2xl bg-gradient-primary shadow-xl border border-primary/20">
                   <img 
                     src="/serenity-logo.png" 
                     alt="Serenity Business Project Logo" 
-                    className="h-16 w-16 object-contain"
+                    className="h-20 w-20 object-contain"
                   />
                 </div>
               </div>

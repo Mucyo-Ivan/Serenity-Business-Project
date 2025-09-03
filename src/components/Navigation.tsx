@@ -25,22 +25,19 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="p-3 rounded-2xl bg-gradient-primary shadow-lg group-hover:shadow-xl transition-all duration-300">
+          <Link to="/" className="flex items-center space-x-4 group">
+            <div className="p-2 rounded-2xl bg-gradient-primary shadow-lg group-hover:shadow-xl transition-all duration-300">
               <img 
                 src="/serenity-logo.png" 
                 alt="Serenity Business Project Logo" 
-                className="h-12 w-12 object-contain"
+                className="h-10 w-10 object-contain"
               />
             </div>
-            <div className="flex flex-col">
+            <div className="flex items-center">
               <span className="font-bold text-xl text-foreground group-hover:text-primary transition-colors duration-300">
-                Serenity
-              </span>
-              <span className="text-xs text-muted-foreground font-medium">
-                Business Project
+                Serenity Business Project
               </span>
             </div>
           </Link>

@@ -74,19 +74,19 @@ const VideoGameCenter = () => {
                 </div>
               </div>
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Video Game Center
-            </h1>
+                Video Game Center
+              </h1>
             <p className="text-lg text-gray-700 mb-8 text-body max-w-4xl mx-auto">
-              A revolutionary approach to community development - using video games to encourage education, 
-              cleanliness, and positive behavior while providing street children with safe recreational activities.
-            </p>
+                A revolutionary approach to community development - using video games to encourage education, 
+                cleanliness, and positive behavior while providing street children with safe recreational activities.
+              </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                Learn More
-              </Button>
+                  Learn More
+                </Button>
               <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                Support Our Mission
-              </Button>
+                  Support Our Mission
+                </Button>
             </div>
           </div>
         </div>

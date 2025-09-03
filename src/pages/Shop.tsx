@@ -39,7 +39,7 @@ const Shop = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-20 bg-gradient-hero">
+      <section className="pt-4 pb-16 bg-gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -90,7 +90,7 @@ const Shop = () => {
       </section>
 
       {/* Business Plan Section */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
@@ -129,7 +129,7 @@ const Shop = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-24 bg-muted">
+      <section className="py-16 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
@@ -152,7 +152,7 @@ const Shop = () => {
       </section>
 
       {/* Vision & Impact Section */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gradient-card rounded-3xl p-12 shadow-2xl border-0">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">

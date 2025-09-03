@@ -41,6 +41,11 @@ All colors MUST be HSL.
     /* Custom Properties */
     --header-height: 80px;
     --section-padding: 80px;
+    
+    /* Transition durations */
+    --transition-fast: 150ms ease;
+    --transition-smooth: 300ms ease;
+    --transition-slow: 500ms ease;
   }
 
   .dark {
@@ -83,6 +88,8 @@ All colors MUST be HSL.
     --gradient-card: linear-gradient(145deg, hsl(220 13% 12%) 0%, hsl(220 13% 15%) 100%);
 
     --shadow-glow: 0 0 0 1px hsl(217 91% 65% / 0.1), 0 0 30px hsl(217 91% 65% / 0.15);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
+    --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
   }
 
   /* Custom animations */
@@ -99,6 +106,21 @@ All colors MUST be HSL.
   @keyframes gradient-shift {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
+  }
+
+  @keyframes slide-up {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes scale-in {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
   }
 }
 
@@ -118,7 +140,7 @@ All colors MUST be HSL.
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -131,6 +153,16 @@ All colors MUST be HSL.
 
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary-hover;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
   }
 }
 
@@ -156,13 +188,33 @@ All colors MUST be HSL.
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
+
+  .shadow-xl {
+    box-shadow: var(--shadow-xl);
+  }
+
+  .shadow-2xl {
+    box-shadow: var(--shadow-2xl);
+  }
   
   .animate-float {
-    animation: var(--animation-float);
+    animation: float 6s ease-in-out infinite;
   }
   
   .animate-pulse-slow {
-    animation: var(--animation-pulse-slow);
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
   }
   
   .transition-smooth {
@@ -171,5 +223,115 @@ All colors MUST be HSL.
   
   .transition-fast {
     transition: var(--transition-fast);
+  }
+
+  .transition-slow {
+    transition: var(--transition-slow);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  /* Text gradients */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Glass morphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-white/10;
+  }
+
+  /* Responsive text */
+  .text-responsive {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+  }
+
+  .text-responsive-subtitle {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+
+  /* Button enhancements */
+  .btn-primary {
+    @apply bg-gradient-primary text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-gradient-secondary text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-semibold px-8 py-4 rounded-2xl hover:bg-primary hover:text-white transition-all duration-300;
+  }
+
+  /* Card enhancements */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:scale-105;
+  }
+
+  .card-glass {
+    @apply glass rounded-3xl p-8 shadow-2xl;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-24;
+  }
+
+  .section-padding-sm {
+    @apply py-16;
+  }
+
+  .section-padding-lg {
+    @apply py-32;
+  }
+
+  /* Container enhancements */
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Grid enhancements */
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8;
+  }
+
+  .grid-responsive-2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-16;
+  }
+
+  /* Typography enhancements */
+  .heading-primary {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-foreground;
+  }
+
+  .heading-secondary {
+    @apply text-3xl md:text-4xl font-bold text-foreground;
+  }
+
+  .heading-tertiary {
+    @apply text-2xl md:text-3xl font-semibold text-foreground;
+  }
+
+  .text-body {
+    @apply text-lg text-muted-foreground leading-relaxed;
+  }
+
+  .text-body-large {
+    @apply text-xl text-muted-foreground leading-relaxed;
   }
 }

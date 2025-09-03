@@ -39,86 +39,62 @@ const Shop = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-4 pb-16 bg-gradient-hero">
+      <section className="pt-2 pb-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="animate-float mb-8">
-                <div className="p-6 rounded-3xl bg-white/20 backdrop-blur-md shadow-2xl border border-white/20">
-                  <ShoppingBag className="h-24 w-24 text-white" />
-                </div>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-                Our Future Shop
-              </h1>
-              <p className="text-xl text-white/90 mb-10 text-body-large">
-                With God's blessing and the right capital, we plan to establish a community shop that serves local needs while creating employment opportunities for youth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6">
-                <Button size="lg" variant="secondary" className="text-lg px-10 py-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-                  Learn More
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-10 py-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-                  Support Our Vision
-                </Button>
+          <div className="text-center">
+            <div className="animate-float mb-6 mx-auto w-fit">
+              <div className="p-4 rounded-2xl bg-gradient-primary shadow-xl border border-primary/20">
+                <ShoppingBag className="h-16 w-16 text-white" />
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-white/10 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-white/20">
-                <h3 className="text-2xl font-semibold text-white mb-6 flex items-center justify-center">
-                  <Heart className="h-7 w-7 mr-3 text-accent" />
-                  Our Impact Vision
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center text-white/90 p-3 rounded-xl hover:bg-white/10 transition-colors duration-300">
-                    <Users className="h-6 w-6 mr-4 text-secondary flex-shrink-0" />
-                    <span className="text-lg">Create jobs for 2 young people</span>
-                  </div>
-                  <div className="flex items-center text-white/90 p-3 rounded-xl hover:bg-white/10 transition-colors duration-300">
-                    <ShoppingBag className="h-6 w-6 mr-4 text-secondary flex-shrink-0" />
-                    <span className="text-lg">Serve community needs</span>
-                  </div>
-                  <div className="flex items-center text-white/90 p-3 rounded-xl hover:bg-white/10 transition-colors duration-300">
-                    <TrendingUp className="h-6 w-6 mr-4 text-secondary flex-shrink-0" />
-                    <span className="text-lg">Contribute to local economy</span>
-                  </div>
-                </div>
-              </div>
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Our Future Shop
+            </h1>
+            <p className="text-lg text-gray-700 mb-8 text-body max-w-4xl mx-auto">
+              With God's blessing and the right capital, we plan to establish a community shop that serves local needs while creating employment opportunities for youth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                Learn More
+              </Button>
+              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                Support Our Vision
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Business Plan Section */}
-      <section className="py-16">
+      <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
               Business Plan Overview
             </h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-body">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto text-body">
               Our shop will be more than just a business - it's a community investment that creates opportunities and serves local needs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {businessPlans.map((plan, index) => (
-              <Card key={index} className="text-center hover:shadow-2xl transition-all duration-300 gradient-card border-0">
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-primary/30">
                 <CardHeader>
-                  <div className="mx-auto mb-6">
-                    {index === 0 && <DollarSign className="h-16 w-16 text-primary mx-auto" />}
-                    {index === 1 && <Users className="h-16 w-16 text-secondary mx-auto" />}
-                    {index === 2 && <Target className="h-16 w-16 text-accent mx-auto" />}
+                  <div className="mx-auto mb-4">
+                    {index === 0 && <DollarSign className="h-12 w-12 text-primary mx-auto" />}
+                    {index === 1 && <Users className="h-12 w-12 text-secondary mx-auto" />}
+                    {index === 2 && <Target className="h-12 w-12 text-accent mx-auto" />}
                   </div>
-                  <CardTitle className="text-3xl font-bold text-primary">
+                  <CardTitle className="text-2xl font-bold text-primary">
                     {plan.amount}
                   </CardTitle>
-                  <CardDescription className="font-semibold text-foreground text-lg">
+                  <CardDescription className="font-semibold text-gray-900 text-lg">
                     {plan.title}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground text-body">
+                  <p className="text-gray-600 text-body">
                     {plan.description}
                   </p>
                 </CardContent>
@@ -129,22 +105,22 @@ const Shop = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-16 bg-muted">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
               Planned Product Categories
             </h2>
-            <p className="text-lg text-muted-foreground text-body">
+            <p className="text-lg text-gray-600 text-body">
               We plan to stock a diverse range of products to meet various community needs and preferences.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {expectedProducts.map((product, index) => (
-              <div key={index} className="flex items-center p-6 bg-background rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="w-3 h-3 bg-gradient-primary rounded-full mr-4 flex-shrink-0"></div>
-                <span className="text-foreground font-medium text-lg">{product}</span>
+              <div key={index} className="flex items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
+                <div className="w-3 h-3 bg-gradient-primary rounded-full mr-3 flex-shrink-0"></div>
+                <span className="text-gray-700 font-medium text-base">{product}</span>
               </div>
             ))}
           </div>
@@ -152,46 +128,46 @@ const Shop = () => {
       </section>
 
       {/* Vision & Impact Section */}
-      <section className="py-16">
+      <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-card rounded-3xl p-12 shadow-2xl border-0">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
               Our Vision & Community Impact
             </h2>
-            <div className="space-y-8 text-left">
-              <div className="flex items-start space-x-6">
-                <div className="p-3 bg-primary-light rounded-2xl mt-2">
-                  <Users className="h-6 w-6 text-primary" />
+            <div className="space-y-6 text-left">
+              <div className="flex items-start space-x-4">
+                <div className="p-3 bg-primary-light rounded-xl mt-1">
+                  <Users className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-3 text-lg">Youth Employment</h3>
-                  <p className="text-muted-foreground text-body">
+                  <h3 className="font-semibold text-gray-900 mb-2 text-lg">Youth Employment</h3>
+                  <p className="text-gray-600 text-body">
                     We will employ 2 young people, providing them with valuable work experience, 
                     skills development, and a stable income to support their personal growth.
                   </p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-6">
-                <div className="p-3 bg-secondary-light rounded-2xl mt-2">
-                  <ShoppingBag className="h-6 w-6 text-secondary" />
+              <div className="flex items-start space-x-4">
+                <div className="p-3 bg-secondary-light rounded-xl mt-1">
+                  <ShoppingBag className="h-5 w-5 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-3 text-lg">Community Service</h3>
-                  <p className="text-muted-foreground text-body">
+                  <h3 className="font-semibold text-gray-900 mb-2 text-lg">Community Service</h3>
+                  <p className="text-gray-600 text-body">
                     By providing essential products at fair prices, we aim to serve our community's 
                     daily needs while supporting local economic growth and development.
                   </p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-6">
-                <div className="p-3 bg-accent-light rounded-2xl mt-2">
-                  <TrendingUp className="h-6 w-6 text-accent" />
+              <div className="flex items-start space-x-4">
+                <div className="p-3 bg-accent-light rounded-xl mt-1">
+                  <TrendingUp className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-3 text-lg">Sustainable Growth</h3>
-                  <p className="text-muted-foreground text-body">
+                  <h3 className="font-semibold text-gray-900 mb-2 text-lg">Sustainable Growth</h3>
+                  <p className="text-gray-600 text-body">
                     Starting with 800,000 RWF, we plan to reinvest profits back into the business 
                     and community, creating a sustainable model for long-term success.
                   </p>
@@ -199,8 +175,8 @@ const Shop = () => {
               </div>
             </div>
             
-            <div className="mt-10">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 h-14 px-10 rounded-2xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
+            <div className="mt-8">
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 h-12 px-8 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
                 Support Our Mission
               </Button>
             </div>
